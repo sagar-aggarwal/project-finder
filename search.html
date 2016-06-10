@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<head>
+	<!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A web-app for finding projects, competitions or teammembers">
+    <meta name="keywords" content="projects, competitions, team, team-members, search">
+    <meta name="author" content="Shreya">
+	
+	<title>Project Finder</title>
+
+	<link href="css/stylesheet.css" rel="stylesheet">
+	 <!--css for Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!--Fonts-->
+   	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<!--Above Navigation Bar-->
+	
+	<div class="container">	
+		<!--A search button-->
+		<form class="navbar-form navbar-right" role="search">
+  			<div class="form-group">
+ 				<input type="text" class="form-control" placeholder="Search">
+ 			</div>
+ 			<button type="submit" class="btn btn-default">Search</button>
+		</form>
+		<!--Logout Button. Initially hidden. Should appear when a person logs in-->
+		<div class="name">
+			<a href="#"> Hi, NameOfTheUser </a>
+			<button type="button" class="btn btn-link">Logout?</button>
+		</div>	
+	</div>
+
+	<!--Navigation Bar-->
+
+	<ul class="topnav">
+		<div class="container">
+	 		<li><a href="" class="herelink" data-toggle="modal" data-target="#feedback">Feedback</a></li>
+		 	<li><a href="#search">Search</a></li>
+		 	<li><a href="#about">About Us</a></li>
+			<li><a href="index.html" class="active">Home</a></li>
+  		</div>
+	</ul>
+
+	<h1><center>Search Engine</center></h1>
+
+	<!--Search Filter Form-->
+	<div class="container">
+		<h2>Filter</h2>
+		<div class="row">
+			<form class="form-inline">
+				<div class="form-group col-sm-3">
+					<label>Type</label>
+					<div>
+      					<div class="checkbox">
+       						<label>
+          						<input type="checkbox"> Projects
+       				 		</label>
+       				 		<br>
+       				 		<label>
+          						<input type="checkbox"> Competitions
+       					 	</label>
+      					</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-3">
+					<label>Sub-type</label>
+					<div>
+	      				<div class="checkbox">
+    	   					<label>
+        	  					<input type="checkbox"> Software
+       					 	</label>
+       					 	<br>
+       					 	<label>
+          					<input type="checkbox"> Hardware
+	       				 	</label>
+    	   				 	<br>
+       					 	<label>
+       					 		<input type="checkbox">	Non-Tech
+       					 	</label>
+      					</div>
+					</div>	
+				</div>	
+				<div class="form-group col-sm-3">
+					<label>Status</label>
+					<div>
+      					<div class="checkbox">
+       						<label>
+          						<input type="checkbox" name="" value=""> Team Members Required
+       				 		</label>
+       				 		<br>
+       					 	<label>
+          						<input type="checkbox" name="" value=""> Funds Required
+       				 		</label>
+       				 		<br>
+       					 	<label>
+          						<input type="checkbox" name="" value=""> Currently Running
+       					 	</label>
+       					 	<br>
+       					 	<label>
+          						<input type="checkbox" name="" value=""> Completed
+       					 	</label>
+      					</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-3">
+					<label>Sort By-</label>
+					<div>
+      					<div class="checkbox">
+       						<label>
+	          					<input type="radio" name="" value="" checked> Date Added 
+    	   				 	</label>
+       					 	<br>
+       					 	<label>
+          						<input type="radio" name="" value="" > Number Of Members 
+       					 	</label>
+       				 		<br>
+ 	      				 	<label>
+    	      					<input type="radio" name="" value="" > Stars 
+       					 	</label>
+       					 	<br>
+       					 	<label>
+          						<input type="radio" name="" value="" > Type 
+       				 		</label>
+       				 		<br>	
+       				 		<label>
+          						<input type="radio" name="" value="" > Status
+    	   				 	</label>
+    	  				</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<br>
+		<div class="row">
+			And here we will display all the projects and competitions in a table format highlighting the ones logged in user is a part of. 
+			Sample, hardcoded table is shown. 
+		</div>
+		<br>
+		<div class="row">
+			<div class="table-responsive">
+				<table class="table table-hover">
+ 				
+  					<tbody>
+    					<tr>
+      						<th scope="row">1</th>
+      						<td>CryOut. Created in nsit hackathon</td>
+      						<td>completed</td>
+ 							<td><a href="">view</a></td>
+    					</tr>
+	    				<tr>
+	      					<th scope="row">2</th>
+	      					<td>Project Finder. Summer Project by PygmyPuffs</td>
+	      					<td>currently running</td>
+	 						<td><a href="">view</a></td>
+	    				</tr>
+	    				<tr>
+	      					<th scope="row">3</th>
+	      					<td>Random name. One line description</td>
+	      					<td>completed</td>
+	 						<td><a href="">view</a></td>
+	    				</tr>
+	    				<tr class="table-success">
+	      					<th scope="row" class="table-success">4</th>
+	      					<td class="table-success">Whatever. Highlighted because logged in user is a part of this project already</td>
+	      					<td class="table-success">Currently Running</td>
+	 						<td class="table-success"><a href="">view</a></td>
+	    				</tr>
+  					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Feedback Form-->
+
+	<form class="modal fade" id="feedback">
+		<div class="modal-dialog modal-md">
+   			<div class="modal-content">
+				<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal">&times;</button>
+      				<h4 class="modal-title">Feedback Form</h4>
+     			</div>
+      			<div class="modal-body">
+        			<form>
+   						<label class="control-label" for="email"><h4>E-Mail Id</h4></label>
+        				<input type="email" name="emailSender" class="form-control">
+        				<br>
+           				<label class="control-label" for="email"><h4>Feedback</h4></label>
+       					<textarea class="form-control" id="feedbackText" rows="7"></textarea>
+   					</form>
+   			   	</div>
+      			<div class="modal-footer">
+   					<button type="button" class="btn btn-default" data-dismiss="modal">Send Feedback</button>
+      			</div>
+    		</div>
+		</div>	
+	</form>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</HTML>
