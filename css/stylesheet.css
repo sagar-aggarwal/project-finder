@@ -1,0 +1,54 @@
+.regText{
+	font-size: 17px;
+	font-family: 'Roboto Slab', serif;
+	margin-top: 17px;
+}
+#feedback{
+	font-family: 'Roboto Slab', serif;
+
+}
+.loginText{
+	padding: 10px;
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+}
+.register{
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+
+}
+/*
+------------------------------------------------------------------------------------
+----------------------------------NAVIGATION BAR------------------------------------
+------------------------------------------------------------------------------------
+*/
+ul.topnav {
+    list-style-type: none;
+   	right: 0;
+    padding: 0;
+    overflow: hidden;
+   	font-family: 'Roboto Slab', serif;
+    background-color: #134252;
+
+}
+ul.topnav li {float: right;}
+
+ul.topnav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #f2f2f2;
+
+}
+ul.topnav li a:hover {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px; 
+	font-size: 20px;
+ }
+
+
+ 
