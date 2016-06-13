@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<head>
+	<!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A web-app for finding projects, competitions or teammembers">
+    <meta name="keywords" content="projects, competitions, team, team-members, search">
+    <meta name="author" content="Shreya">
+	
+	<title>Project Finder</title>
+
+	<link href="css/stylesheet.css" rel="stylesheet">
+	 <!--css for Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!--Fonts-->
+   	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<!--Above Navigation Bar-->
+	
+	<div class="container">	
+		<!--A search button-->
+		<form class="navbar-form navbar-right" role="search">
+  			<div class="form-group">
+ 				<input type="text" class="form-control" placeholder="Search">
+ 			</div>
+ 			<button type="submit" class="btn btn-default">Search</button>
+		</form>
+		<!--Logout Button. Initially hidden. Should appear when a person logs in-->
+		<div class="name">
+			<a href="#"> Hi, NameOfTheUser </a>
+			<button type="button" class="btn btn-link">Logout?</button>
+		</div>	
+
+		<!--Nav bar with icons-->
+	</div>
+
+	<br><br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<h1>NameOfTheUser</h1>
+				<br>
+				//email id, institute, website, resume, one liner maybe?
+			</div>
+			<br>
+			<div class="col-sm-3col-offset-1">			
+				<form action="demo_form.asp">
+					<input type="file" name="pic" accept="image/*">
+					<br>
+					<input type="submit">
+					<br>
+					//placeholder image
+				</form>
+			</div>
+			
+		</div>
+		<br><br>
+		<div class="row vertical-divider" style="margin-top: 30px">
+			<center><h2>Currently Running</h2></center>
+			<div class="col-sm-6">
+				<table class="table">
+					<tr>
+						<td>
+							project name
+						</td>
+						<td>
+							view
+						</td>
+						<td>
+							<button type="button" class="btn btn-default" aria-label="">
+								<span class="glyphicon glyphicon-star" aria-hidden=""></span>
+							
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							project name
+						</td>
+						<td>
+							view
+						</td>
+						<td>
+							<button type="button" class="btn btn-default" aria-label="">
+								<span class="glyphicon glyphicon-star" aria-hidden=""></span>		
+							</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				list of competitions..
+				<br>
+				 get values using json
+				<br>
+				display like adjoining table using jquery
+			</div>	
+		</div>
+		<br>
+		<div class="row vertical-divider" style="margin-top: 30px">
+			<center><h2>Cumpleted</h2></center>
+			<div class="col-sm-6">
+				list of comleted projects
+				<br>
+				displayed in the form of a table
+			</div>
+			<div class="col-sm-6">
+				list of competitions..
+				<br>
+				 get values using json
+				<br>
+				display as a table using jquery
+			</div>	
+		</div>
+	</div>
+
+	
+		
+	<!--Feedback Form-->
+
+	<form class="modal fade" id="feedback">
+		<div class="modal-dialog modal-md">
+  			<div class="modal-content">
+			    <div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal">&times;</button>
+       				<h4 class="modal-title">Feedback Form</h4>
+   				</div>
+      			<div class="modal-body">
+        			<form>
+   						<label class="control-label" for="email"><h4>E-Mail Id</h4></label>
+        				<input type="email" name="emailSender" class="form-control">
+        				<br>
+           				<label class="control-label" for="email"><h4>Feedback</h4></label>
+       					<textarea class="form-control" id="feedbackText" rows="7"></textarea>
+   					</form>
+   			   	</div>
+       			<div class="modal-footer">
+      				<button type="button" class="btn btn-default" data-dismiss="modal">Send Feedback</button>
+   				</div>
+    		</div>
+		</div>	
+	</form>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</HTML>
