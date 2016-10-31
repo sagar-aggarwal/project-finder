@@ -154,25 +154,25 @@
       						<th scope="row">1</th>
       						<td>CryOut. Created in nsit hackathon</td>
       						<td>completed</td>
- 							<td><a href="">view</a></td>
+ 							    <td><a href="" class="herelink" data-toggle="modal" data-target="#projectPage">view</a></td>
     					</tr>
 	    				<tr>
 	      					<th scope="row">2</th>
 	      					<td>Project Finder. Summer Project by PygmyPuffs</td>
 	      					<td>currently running</td>
-	 						<td><a href="">view</a></td>
+	 						    <td><a href=""class="herelink" data-toggle="modal" data-target="#projectPage">view</a></td>
 	    				</tr>
 	    				<tr>
 	      					<th scope="row">3</th>
 	      					<td>Random name. One line description</td>
 	      					<td>completed</td>
-	 						<td><a href="">view</a></td>
+	 						    <td><a href="" class="herelink" data-toggle="modal" data-target="#projectPage">view</a></td>
 	    				</tr>
 	    				<tr class="table-success">
 	      					<th scope="row" class="table-success">4</th>
 	      					<td class="table-success">Whatever. Highlighted because logged in user is a part of this project already</td>
 	      					<td class="table-success">Currently Running</td>
-	 						<td class="table-success"><a href="">view</a></td>
+	 						    <td class="table-success"><a href=""class="herelink" data-toggle="modal" data-target="#projectPage">view</a></td>
 	    				</tr>
   					</tbody>
 				</table>
@@ -184,27 +184,54 @@
 	<!--Feedback Form-->
 
 	<form class="modal fade" id="feedback">
-		<div class="modal-dialog modal-md">
-   			<div class="modal-content">
-				<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal">&times;</button>
-      				<h4 class="modal-title">Feedback Form</h4>
-     			</div>
-      			<div class="modal-body">
-        			<form>
-   						<label class="control-label" for="email"><h4>E-Mail Id</h4></label>
-        				<input type="email" name="emailSender" class="form-control">
-        				<br>
-           				<label class="control-label" for="email"><h4>Feedback</h4></label>
-       					<textarea class="form-control" id="feedbackText" rows="7"></textarea>
-   					</form>
-   			   	</div>
-      			<div class="modal-footer">
-   					<button type="button" class="btn btn-default" data-dismiss="modal">Send Feedback</button>
-      			</div>
-    		</div>
-		</div>	
-	</form>
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Feedback Form</h4>
+          </div>
+            <form action="feedback.php" method="POST">
+              <div class="modal-body">
+              <label class="control-label" for="email"><h4>E-Mail Id</h4></label>
+                <input type="email" name="feedbackSender" class="form-control">
+                <br>
+                  <label class="control-label" for="feedback"><h4>Feedback</h4></label>
+                <textarea class="form-control" name="feedbackText" rows="7"></textarea>             
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-default" data-dismiss="modal" name="sendFeedback" value="Send Feedback" />
+            </div>
+          </form>
+        </div>
+    </div>  
+  </form>
+
+  <!--Project Page-->
+  <div class="modal fade" id="projectPage">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>Project Name</h4>
+          </div>
+            <div class="modal-body">
+              get description<br>
+              get link<br>
+              get images (at most 5)<br>
+              get status<br>
+              get number of members required<br>
+              get members already a part of it<br>
+              get category acc to search page<br>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" aria-label="">
+                <span class="glyphicon glyphicon-star" aria-hidden=""></span>   
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Request Membership</button>
+          </div>
+        </div>
+    </div>  
+  </div>
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
